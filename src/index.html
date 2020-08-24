@@ -42,9 +42,9 @@
         }
 
         .site-intro__name {
-            font-size: 1.5rem;
+            font-size: 1.375rem;
             font-weight: normal;
-            text-indent: 0.5rem;
+            text-indent: 0.25rem;
             position: relative;
         }
 
@@ -55,12 +55,12 @@
             height: 8px;
             background: #cc0088;
             position: absolute;
-            bottom: 12px;
-            left: -0.5rem
+            bottom: 10px;
+            left: -0.75rem
         }
 
         .site-intro__title-outline {
-            font-size: 3.8rem;
+            font-size: 4rem;
             font-weight: bold;
             line-height: 1;
             -webkit-text-stroke: 1px #1a202c;
@@ -94,11 +94,11 @@
         }
 
         .site-intro__title-outline {
-            animation: slideProduct 0.5s;
+            animation: slideProduct 1s 2s;
         }
 
         .site-intro__title-solid {
-            font-size: 3.8rem;
+            font-size: 4rem;
             font-weight: bold;
             position: relative;
             line-height: 1;
@@ -108,21 +108,21 @@
             content: "n";
             position: absolute;
             right: -2%;
-            opacity: 0.02;
+            opacity: 0.05;
         }
 
         .site-intro__title-solid:after {
             content: "n";
             position: absolute;
             right: -16%;
-            opacity: 0.01;
+            opacity: 0.02;
         }
 
         .site-intro__prep {
             font-style: italic;
             font-size: 1rem;
             font-weight: normal;
-            text-indent: 0.5rem;
+            text-indent: 0.25rem;
             padding: 0.8rem 0 1rem;
         }
 
@@ -154,7 +154,7 @@
         }
 
         .site-intro__title-solid {
-            animation: slideDesign 0.5s;
+            animation: slideDesign 1s 2s;
         }
 
         @media screen and (min-width: 760px) {
@@ -162,6 +162,11 @@
             .site-intro {
                 position: relative;
                 left: 2%;
+            }
+
+            .site-intro__name, 
+            .site-intro__prep {
+                text-indent: 0.5rem;
             }
 
             .site-intro__title-solid,
