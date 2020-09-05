@@ -8,202 +8,7 @@
     <link rel="canonical" href="https://www.toheeb.com">
     <title>I. Design. Develop - toheeB Ogunbiyi</title>
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html {
-            height: 100%;
-        }
-
-        body {
-            font: 1.125rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #1a202c;
-            
-            display: flex;
-            flex-flow: column wrap;
-            min-height: 100%;
-            overflow: hidden;
-        }
-
-        .cta-secondary {
-            color: #cc0088;
-            font-weight: bold;
-        }
-
-        .site-intro {
-            display: flex;
-            flex-flow: column wrap;
-            margin: auto;
-        }
-
-        .site-intro__name {
-            font-size: 1.375rem;
-            font-weight: normal;
-            text-indent: 0.25rem;
-            position: relative;
-        }
-
-        .site-intro__name:before {
-            content: "";
-            display: block;
-            width: 8px;
-            height: 8px;
-            background: #cc0088;
-            position: absolute;
-            bottom: 10px;
-            left: -0.75rem
-        }
-
-        .site-intro__title-outline {
-            font-size: 4rem;
-            font-weight: bold;
-            line-height: 1;
-            -webkit-text-stroke: 1px #1a202c;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-        }
-
-        .site-intro__title-outline:before {
-            content: "P";
-            position: absolute;
-            bottom: 0;
-            left: -8%;
-            opacity: 0.1;
-        }
-
-        .site-intro__title-outline:after {
-            content: "P";
-            position: absolute;
-            bottom: 0;
-            left: -16%;
-            opacity: 0.05;
-        }
-
-        @keyframes slideProduct {
-            0%  { transform: translate(-200%); }
-            23% { transform: translate(50%); }
-            46% { transform: translate(-12%); }
-            69% { transform: translate(3%); }
-            92% { transform: translate(-1%); }
-            100% { transform: translate(0); }
-        }
-
-        .site-intro__title-outline {
-            animation: slideProduct 0.5s 2s;
-        }
-
-        .site-intro__title-solid {
-            font-size: 4rem;
-            font-weight: bold;
-            position: relative;
-            line-height: 1;
-        }
-
-        .site-intro__title-solid:before {
-            content: "n";
-            position: absolute;
-            right: -2%;
-            opacity: 0.05;
-        }
-
-        .site-intro__title-solid:after {
-            content: "n";
-            position: absolute;
-            right: -16%;
-            opacity: 0.02;
-        }
-
-        .site-intro__prep {
-            font-style: italic;
-            font-size: 1rem;
-            font-weight: normal;
-            text-indent: 0.25rem;
-            padding: 0.8rem 0 1rem;
-        }
-
-        .site-footer {
-            padding: 0.75rem 1rem;
-            padding: 3vm 5vm;
-            padding: 3vmin 5vmin;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .current-work {
-            padding-right: 3rem;
-        }
-
-        .mail-message {
-            padding: 0;
-            border: 0 none;
-            background: transparent;
-        }
-
-        @keyframes slideDesign {
-            0%  { transform: translate(200%); }
-            23% { transform: translate(-50%); }
-            46% { transform: translate(12%); }
-            69% { transform: translate(-3%); }
-            92% { transform: translate(1%); }
-            100% { transform: translate(0); }
-        }
-
-        .site-intro__title-solid {
-            animation: slideDesign 0.5s 2s;
-        }
-
-        @media screen and (min-width: 760px) {
-
-            .site-intro {
-                position: relative;
-                left: 2%;
-            }
-
-            .site-intro__name, 
-            .site-intro__prep {
-                text-indent: 0.5rem;
-            }
-
-            .site-intro__title-solid,
-            .site-intro__title-outline {
-                font-size: 8rem;
-                font-size: 20vmin;
-            }
-
-            .site-intro__title-solid:before {
-                right: -4%;
-            }
-
-            .site-intro__title-solid:after {
-                right: -22%;
-            }
-
-            .site-intro__title-outline:before {
-                left: -18%;
-            }
-
-            .site-intro__title-outline:after {
-                left: -36%;
-            }
-
-            .site-intro__prep {
-                padding: 1.5rem 0 1rem;
-            }
-        }
-
-        @media screen and (min-width: 1000px) {
-
-            .site-intro__title-solid,
-            .site-intro__title-outline {
-                font-size: 8rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/styles/home.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176103387-1"></script>
@@ -216,22 +21,26 @@
     </script>
 </head>
 
-<body>
-    <h1 class="site-intro">
-        <span class="site-intro__name">toheeB</span>
-        <span class="site-intro__prep">on</span>
-        <span class="site-intro__title-outline">Product</span>
-        <span class="site-intro__title-solid">Design</span>
+<body class="page">
+    <h1 class="title page__title">
+        <span class="title__subject page__title-subject">toheeB</span>
+        <span class="title__prep page__title-prep">on</span>
+        <span class="title__object-product page__title-object-product">Product</span>
+        <span class="title__object-design page__title-object-design">Design</span>
     </h1>
 
-    <div class="site-footer">
-        <p class="current-work">Currently building <a class="cta-secondary" href="https://b.rand.i.ng">b.rand.i.ng</a> for enterpreneurs</p>
-        <a href="https://contact.do/d7h7" aria-label="contact">
-            <svg fill="none" viewBox="0 0 24 24" stroke="#1a202c" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>        
+    <div class="info">
+        <p class="info__project">Currently building <a class="cta-secondary" href="https://b.rand.i.ng">b.rand.i.ng</a>
+            for
+            enterpreneurs</p>
+        <a class="info__contact" href="https://contact.do/d7h7" aria-label="contact">
+            <svg fill="none" viewBox="0 0 24 24" stroke="#1a202c" width="24" height="24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+            </svg>
         </a>
     </div>
-
-    
 </body>
 
 </html>
