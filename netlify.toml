@@ -12,3 +12,16 @@
 
 [build.processing.images]
   compress = true
+
+
+[[redirects]]
+  from = "https://toheeb.com"
+  to = "https://blog.toheeb.com"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://www.toheeb.com"
+  to = "https://blog.toheeb.com"
+  status = 302
+  force = true
