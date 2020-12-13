@@ -199,6 +199,7 @@ S T R U C T U R E
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .info__project {
@@ -210,4 +211,14 @@ S T R U C T U R E
 .cta-secondary {
   color: #cc0088;
   font-weight: bold;
+}
+
+
+.nav {
+  display: flex;
+  flex-flow: column;
+}
+
+.nav__write {
+  margin-bottom: 1.5rem;
 }
