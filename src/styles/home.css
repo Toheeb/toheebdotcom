@@ -192,14 +192,15 @@ S T R U C T U R E
 }
 
 .info {
-  padding: 3vm 5vm;
-  padding: 3vmin 5vmin;
+  /* padding: 3vm 5vm;
+  padding: 3vmin 5vmin; */
+  padding: 1rem 1.5rem;
   
   display: -webkit-flex;  
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .info__project {
@@ -216,9 +217,18 @@ S T R U C T U R E
 
 .nav {
   display: flex;
-  flex-flow: column;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
 }
 
-.nav__write {
-  margin-bottom: 1.5rem;
+.nav__item {
+  margin-left: 1rem;
+}
+
+.signature__guides {
+  display: none;
+}
+
+.page__signature {
+  margin-right: 1rem;
 }
