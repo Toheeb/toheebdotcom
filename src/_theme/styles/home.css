@@ -430,3 +430,32 @@ S T R U C T U R E
 @media (min-width: 768px) {
   html .blog { font-size: 112.5% }
 }
+
+@media (min-width: 1920px) {
+
+  /* 
+   * Restrain the max width of the page 
+   * By so doing, page scanning is easier for readability. 
+   * Eyes can easily travel back to the beginning of the next content.
+   * 
+   */
+
+  .page {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* 
+   * Contraint variable font-size.
+   *
+   * If not, they become so big that others become too small.
+   */
+   
+  .title__object-product,
+  .title__object-design {
+    font-size: var(--scale6);
+  }
+
+}
