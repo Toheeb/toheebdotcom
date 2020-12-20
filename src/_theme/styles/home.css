@@ -199,13 +199,13 @@ S T R U C T U R E
 .info {
   /* padding: 3vm 5vm;
   padding: 3vmin 5vmin; */
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1.5rem;
   
   display: -webkit-flex;  
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .info__project {
@@ -223,23 +223,15 @@ S T R U C T U R E
 
 .nav {
   display: flex;
-  justify-content: flex-end;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
 }
 
 .nav__item {
-  margin-left: 1rem;
+  margin-right: 1rem;
   text-decoration: none;
   color: #456;
 }
 
-/* .signature__guides {
-  display: none;
-} */
-
-.page__signature {
-  margin-right: 1rem;
-}
 
 .signature_as-bg {
   position: absolute;
@@ -431,6 +423,18 @@ S T R U C T U R E
   html .blog { font-size: 112.5% }
 }
 
+@media (min-width: 1024px) {
+  
+  .nav {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .info__project {
+    padding: 0 0 0.75rem 1rem;
+  }
+
+}
+
 @media (min-width: 1920px) {
 
   /* 
@@ -452,7 +456,7 @@ S T R U C T U R E
    *
    * If not, they become so big that others become too small.
    */
-   
+
   .title__object-product,
   .title__object-design {
     font-size: var(--scale6);
