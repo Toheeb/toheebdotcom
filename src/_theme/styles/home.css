@@ -221,18 +221,6 @@ S T R U C T U R E
 }
 
 
-.nav {
-  display: flex;
-  padding: 0.8rem 1.5rem;
-}
-
-.nav__item {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #456;
-}
-
-
 .signature_as-bg {
   position: absolute;
   z-index: -100;
@@ -364,6 +352,25 @@ S T R U C T U R E
 }
 
 
+.social-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.social-menu-list__item {
+  padding: 0.75rem;
+  display: inline-flex;
+}
+
+
+
+
 .home-link {
   margin-bottom: 3rem;
   display: flex;
@@ -423,17 +430,6 @@ S T R U C T U R E
   html .blog { font-size: 112.5% }
 }
 
-@media (min-width: 1024px) {
-  
-  .nav {
-    padding: 1.5rem 2.5rem;
-  }
-
-  .info__project {
-    padding: 0 0 0.75rem 1rem;
-  }
-
-}
 
 @media (min-width: 1920px) {
 
