@@ -1,15 +1,17 @@
 
 {% include "header.njk" %}  
 
-    <div class="blog">
+    <div class="single-page">
     
         <a href="/blog" class="home-link">
             <svg width="24" class="home-link__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
             Blog
         </a>
 
-        {{ content | safe }}
-
+        <div class="blog">
+            {{ content | safe }}
+        </div>
+        
     </div>
 
     <div class="blog-footer">
