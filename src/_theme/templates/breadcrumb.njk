@@ -1,0 +1,29 @@
+
+<ol class="breadcrumb-list">
+    <li class="breadcrumb-list__item">
+        <a href="/" class="breadcrumb-list__link">
+            Home 
+        </a>
+    </li>
+
+    {% for path in page.url.slice(1, -1).split('/') %}
+    
+        <li class="breadcrumb-list__item">
+
+            {% if loop.last %}
+                {% if  path.length > 10 %}
+                    {{  path.slice(0, 10) }}...
+                {% else %} 
+                    {{ path }}
+                {% endif %}
+            {% else %}
+                <a href="{{ page.url.slice(0, page.url.indexOf('/' + path + '/')) + '/' + path + '/' }}" class="breadcrumb-list__link">
+                    {{  path }}
+                </a>
+            {% endif %}
+
+        </li>
+
+    {% endfor %}
+
+</ol>
