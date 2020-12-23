@@ -24,6 +24,7 @@ L A Y O U T
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
 
   color: #345;
   font: 1rem/1.8 -apple-system, BlinkMacSystemFont, Ubuntu, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', 'Trebuchet MS', sans-serif;
@@ -300,7 +301,7 @@ S T R U C T U R E
   max-width: 540px;
   padding: 1.5rem;
   box-sizing: border-box;
-  margin: auto;
+  margin: 5rem auto;
 }
 
 .heroicon {
