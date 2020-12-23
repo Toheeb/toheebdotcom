@@ -29,9 +29,15 @@
     
         {% include "breadcrumb.njk" %}
 
-        <div class="blog">
-            {{ content | safe }}
-        </div>
+        {% block pageTitle %}{% endblock %}
+
+        {% block pageContent %}
+
+            <div class="blog">
+                {{ content | safe }}
+            </div>
+
+        {% endblock %}
 
     </div>
 

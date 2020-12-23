@@ -2,16 +2,12 @@
 permalink: "/blog/"
 ---
 
-{% include "header.njk" %}
+{% extends "single.njk" %}
 
-    <main class="single-page">
+{% block pageTitle %}
+    <h1 class="h1">Blog</h1>
+{% endblock %}
 
-        {% include "breadcrumb.njk" %}
-
-        <h1 class="h1">Blog</h1>
-    
-        {% include "posts.njk" %}
-
-    </main>
-
-{% include "footer.njk" %}
+{% block pageContent %}
+    {% include "posts.njk" %}   
+{% endblock %}
