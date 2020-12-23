@@ -235,6 +235,15 @@ S T R U C T U R E
 }
 
 
+.page__signature {
+  height: 0;
+  overflow: visible;
+  align-self: flex-end;
+  position: sticky;
+  top: calc(100vh - 72px - 1rem);
+  right: 1rem;
+}
+
 .signature {
   filter: drop-shadow(1px 1px 1px rgba(68,65, 102));
 }
