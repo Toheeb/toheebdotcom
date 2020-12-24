@@ -327,6 +327,7 @@ S T R U C T U R E
   content: '\000bb';
   padding: 0 0.4rem;
   color: #cce;
+  font-family: serif;
 
   position: relative;
   top: 1px;
@@ -459,6 +460,14 @@ S T R U C T U R E
   margin-bottom: 1rem;
 }
 
+.top-link:before {
+  content: '\02191';
+  font-size: var(--scale3);
+  line-height: 1;
+  font-family: serif;
+  margin-bottom: 1rem;
+}
+
 .article-list {
   list-style: none;
   margin: 0;
@@ -472,9 +481,17 @@ S T R U C T U R E
 
 .article-list__item-link {
   padding: 0.5rem 0;
-  display: block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #668;
+}
+
+.article-list__item-link:before {
+  content: '\0203a';
+  padding: 0 0.5rem 0 0.25rem;
+  color: #cce;
+  font-family: serif;
 }
 
 .article-list__item {
