@@ -32,6 +32,11 @@ L A Y O U T
 }
 
 .page__title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  
   margin: auto;
   transform: translateY(-2vmin);
 }
