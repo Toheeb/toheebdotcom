@@ -24,7 +24,7 @@ L A Y O U T
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   color: #345;
   font: 1rem/1.8 -apple-system, BlinkMacSystemFont, Ubuntu, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', 'Trebuchet MS', sans-serif;
@@ -38,7 +38,6 @@ L A Y O U T
   overflow: hidden;
   
   margin: auto;
-  transform: translateY(-2vmin);
 }
 
 .page__title-subject {
@@ -48,7 +47,7 @@ L A Y O U T
 
 .page__title-prep {
   text-indent: 1.2vmin;
-  margin: 2vmin 0 4vmin 0;
+  margin: 0 0 2vmin 0;
 }
 
 .page__title-object-product {
@@ -112,6 +111,11 @@ L A Y O U T
   }
 }
 
+.main-content {
+  margin: auto;
+  width: 100%;
+}
+
 
 /***********************************
 ************************************
@@ -133,6 +137,8 @@ S T R U C T U R E
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
+
+  margin: 1.5rem 1.5rem 3rem;
 }
 
 .title__subject {
@@ -358,6 +364,23 @@ S T R U C T U R E
 }
 
 
+.description {
+  display: flex;
+  
+  flex-flow: column nowrap;
+  margin: 0 1.5rem 3rem 2.5rem;
+}
+
+.description__part {
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+
+.description__part::before {
+  content: '\02591';
+  position: absolute;
+  left: -1.2rem;
+}
 
 
 .single-page {
@@ -506,15 +529,46 @@ S T R U C T U R E
   border-bottom: 1px solid rgba(200, 220, 242,0.2);
 }
 
+@media (min-width: 640px) {
+  .description {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .description__part {
+    margin: 0 1.5rem;
+    max-width: 300px;
+  }
+}
 
 @media (min-width: 768px) {
   html .blog { font-size: 112.5% }
+
+  .title {
+    margin-bottom: 10vmin;
+  }
 }
 
 @media (min-width: 1024px) {
   .title__subject {
     font-size: var(--scale1);
   }
+
+  /* .main-content {
+    width: 100%;
+  } */
+
+  .description {
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .description__part {
+    margin: 0 1rem 0.5rem 4rem;
+  }
+
+  
+
 }
 
 
