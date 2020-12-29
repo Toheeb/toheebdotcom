@@ -1,13 +1,9 @@
 ---
 permalink: "/blog/"
+layout: _page-single.njk
 ---
 
-{% extends "single.njk" %}
 
-{% block pageTitle %}
-    <h1 class="h1">Blog</h1>
-{% endblock %}
+<h1 class="h1">Blog</h1>
 
-{% block pageContent %}
-    {% include "posts.njk" %}   
-{% endblock %}
+{% include "post-list.njk" %}   
