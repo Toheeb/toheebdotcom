@@ -2,8 +2,15 @@
 layout: _page-single.njk
 ---
 
+{# <time class="publish-date">16th of Jan. 2020</time> #}
+{% if date %} 
+    <time class="post-date"> 
+        {{ page.date.toDateString() }}
+    </time>
+{% endif %} 
+
 <div class="blog">
 
     {{ content | safe }}
-    
+
 </div>
