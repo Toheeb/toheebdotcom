@@ -261,7 +261,7 @@ S T R U C T U R E
 }
 
 
-.signature_as-bg {
+.signature_bg {
   position: absolute;
   z-index: -100;
   width: 100vmin;
@@ -285,56 +285,61 @@ S T R U C T U R E
 
 .signature {
   filter: drop-shadow(1px 1px 1px #455452);
+
 }
 
-.signature__name,
-.signature__spikes {
+.signature .signature__name,
+.signature .signature__spikes {
   fill: rgb(253, 254, 255);
 }
 
-.signature__flourish {
+.signature .signature__flourish {
   stroke: rgb(253, 254, 255);
 }
 
-.bg-signature__flourish {
+.signature .signature__guides {
+  display: none;
+}
+
+.signature_bg .signature__flourish {
   stroke: #fefaff;
   stroke-dasharray: 70;
   stroke-dashoffset: 70;
   animation: dash 30s 5s linear alternate infinite;
 }
 
-.bg-signature__name {
+.signature_bg .signature__name {
   fill: #fefaff;
 }
 
-.bg-signature__spikes {
+.signature_bg .signature__spikes {
   fill: #f7f1f9;
 }
 
-.bg-signature__circle-guide {
+.signature_bg .signature__circle-guide {
   stroke: hsl(285, 100%, 98%);
 }
 
-.bg-signature__guide {
+.signature_bg .signature__line-guide {
   stroke: #faebff;
   stroke-dasharray: 15;
   stroke-dashoffset: 15;
   animation: dash 5s linear alternate infinite;
 }
 
-.bg-signature__guide_2 {
+.signature_bg .signature__line-guide_2 {
   animation-delay: 1s;
 }
-.bg-signature__guide_3 {
+.signature_bg .signature__line-guide_3 {
   animation-delay: 2s;
 }
-.bg-signature__guide_4 {
+.signature_bg .signature__line-guide_4 {
   animation-delay: 3s;
 }
-.bg-signature__guide_5 {
+.signature_bg .signature__line-guide_5 {
   animation-delay: 4s;
 }
-.bg-signature__guide_6 {
+.signature_bg .signature__line-guide_6 {
   animation-delay: 5s;
 }
 
