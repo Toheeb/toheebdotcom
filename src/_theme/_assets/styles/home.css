@@ -134,6 +134,19 @@ L A Y O U T
   border-top: 2rem solid white;
 }
 
+.content-block {
+  width: 100%;
+  max-width: 540px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page__content-block {
+  margin: 0rem auto 10rem;
+  padding:0 1.5rem;
+}
+
+
 /***********************************
 ************************************
 S T R U C T U R E
@@ -249,6 +262,7 @@ S T R U C T U R E
   /* padding: 3vm 5vm;
   padding: 3vmin 5vmin; */
   padding: 1rem 1rem 1rem 1.5rem;
+  margin-top: auto;
   
   display: -webkit-flex;  
   display: -ms-flexbox;
@@ -301,6 +315,7 @@ S T R U C T U R E
   position: sticky;
   top: calc(100vh - 72px - 1rem);
   right: 1rem;
+  z-index: -1;
 }
 
 .signature {
@@ -388,16 +403,18 @@ S T R U C T U R E
 }
 
 
-.breadcrumb {
+.page__breadcrumb {
   position: sticky;
   top: 0;
   z-index: 10;
+  margin: 1rem auto 4rem;
+  padding: 0 1.5rem;
 }
 
 .breadcrumb-list {
   display: flex;
   list-style: none;
-  margin: 0 0 4rem 0;
+  margin: 0;
   padding: 0.5rem 0;
 
   background-color: rgb(253, 254, 255);
@@ -493,13 +510,27 @@ S T R U C T U R E
   color: #45877c;
 }
 
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+}
 
-.single-page {
-  width: 100%;
-  max-width: 540px;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  margin: 3rem auto 6rem;
+.main-nav__list-item:after {
+  content: '/';
+  padding: 0 0.35rem;
+  color: rgba(151, 141, 170, 0.5);
+}
+
+.main-nav__list-item:last-child:after {
+  content: '';
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #7a718c;
+  font-size: .875rem;
 }
 
 .heroicon {

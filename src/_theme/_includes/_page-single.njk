@@ -9,9 +9,9 @@ layout: _page.njk
 
 </aside>
 
-<div class="single-page">
+{% include "breadcrumb.njk" %}
 
-    {% include "breadcrumb.njk" %}
+<div class="content-block page__content-block">
 
     {{ content | safe }}
 

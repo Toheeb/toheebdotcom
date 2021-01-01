@@ -1,18 +1,21 @@
+    <footer class="info" role="contentinfo">
     
-    {% if page.url == '/' %}   
-
-        <footer class="info" role="contentinfo">
-
+        {% if page.url == '/' %}   
+        
             <p class="info__project">Currently building <a class="cta-secondary"
                 href="https://branding.toheeb.com">branding</a>
             for entrepreneurs</p>
                     
             {% set signatureClass ="signature" %}
             {% include "signature.njk" %}
-            
-        </footer>
-        
-    {% endif %}
+                
+        {% else %}
+
+            {% include "nav-main.njk" %}        
+
+        {% endif %}
+
+    </footer>
 
 </body>
 
