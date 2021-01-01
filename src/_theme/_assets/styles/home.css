@@ -495,7 +495,10 @@ S T R U C T U R E
   display: flex;
   
   flex-flow: column nowrap;
-  margin: 0 1.5rem 3rem 2.5rem;
+}
+
+.page__description {
+  margin: 0 3rem 3rem;
 }
 
 .description__part {
