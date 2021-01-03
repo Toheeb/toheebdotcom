@@ -3,37 +3,27 @@
 
     <ol class="breadcrumb-list">
 
-        <li class="breadcrumb-list__item">
-            <a href="/" class="breadcrumb-list__link">
-                Home 
-            </a>
-        </li>
-
-        {% for path in page.url.slice(1, -1).split('/') %}
+        {% for entry in navPages %}
         
             <li class="breadcrumb-list__item">
-
-                {% if loop.last %}
-
-                    <a href="#" aria-current="page" tabindex="-1" class="breadcrumb-list__item_last">
-                        {% if  path.length > 10 %}
-                            {{  path.slice(0, 10) }}...
-                        {% else %} 
-                            {{ path }}
-                        {% endif %}
-                    </a>
-
-                {% else %}
-
-                    <a href="{{ page.url.slice(0, page.url.indexOf('/' + path + '/')) + '/' + path + '/' }}" class="breadcrumb-list__link">
-                        {{  path }}
-                    </a>
-
-                {% endif %}
-
+                <a href={{entry.url | url}} class="breadcrumb-list__link">
+                    {{ entry.title }}
+                </a>
             </li>
 
         {% endfor %}
+
+        <li class="breadcrumb-list__item">
+            <a href="#" aria-current="page" tabindex="-1" class="breadcrumb-list__item_last">
+                {% set fileSlug = page.fileSlug %}
+                
+                {% if fileSlug.length > 5 %}
+                    {{ ['<span class="ellipsis">', fileSlug.slice(0, 5), '</span>', '<span class="visually-hidden">', fileSlug.slice(5), '</span>'].join('') | safe }}
+                {% else %} 
+                    {{ fileSlug }}
+                {% endif %}
+            </a>
+        </li>
 
     </ol>
 

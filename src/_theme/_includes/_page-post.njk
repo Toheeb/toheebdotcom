@@ -1,8 +1,13 @@
 ---
 layout: _page-single.njk
+eleventyNavigation: 
+    key: post
+    parent: blog
 ---
 
-{# <time class="publish-date">16th of Jan. 2020</time> #}
+{% set navPages = collections.all | eleventyNavigationBreadcrumb('post') %}
+{% include "breadcrumb.njk" %}
+
 {% if date %} 
     <time class="post-date"> 
         {{ page.date.toDateString() }}

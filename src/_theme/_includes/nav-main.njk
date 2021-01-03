@@ -1,9 +1,32 @@
+
+{% set navPages = collections.all | eleventyNavigation %}
+{% set navDeepness = 2 %}
+
+{% macro renderNavListItem(entry, level) %}
+    <li>
+        <a href="{{ entry.url | url }}" class="main-nav__link"> {{entry.title}} </a>
+
+            {# Runs subsequently after after initial #}
+            {% if level < navDeepness %}
+                {% if entry.children.length %}
+                    <ul class="main-nav__list">
+                        {% for child in entry.children %}
+                            {{ renderNavListItem(child, level + 1) }}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endif %}
+
+    </li>
+{% endmacro %}
+
 <nav role="navigation" aria-label="Main Navigation" class="main-nav">
     <ul class="main-nav__list">
-        <li class="main-nav__list-item"><a class="main-nav__link" href="">Home</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="">Blog</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="">Tools</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="">Subscribe</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="">Get in touch</a></li>
+
+        {# First Level run #}
+        {% for entry in navPages %}
+            {{ renderNavListItem(entry, loop.index) }}   
+        {% endfor %}
+
     </ul>
 </nav>
