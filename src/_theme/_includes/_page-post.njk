@@ -5,7 +5,7 @@ eleventyNavigation:
     parent: blog
 ---
 
-{% set navPages = collections.all | eleventyNavigationBreadcrumb('post') %}
+{% set navPages = collections.all | eleventyNavigationBreadcrumb('post', true) %}
 {% include "breadcrumb.njk" %}
 
 {% if date %} 
