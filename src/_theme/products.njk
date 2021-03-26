@@ -1,0 +1,13 @@
+---
+permalink: "/tools/"
+layout: _page-single.njk
+title: "Some of the products I've made"
+eleventyNavigation: 
+    key: products
+    parent: home
+---
+
+{% set navPages = collections.all | eleventyNavigationBreadcrumb('products', true) %}
+{% include "breadcrumb.njk" %}
+
+<h1 class="h1">Products</h1>

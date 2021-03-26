@@ -1,4 +1,10 @@
 {
     "name": "toheeB",
-    "url": "https://www.toheeb.com"
+    "url": "https://www.toheeb.com/",
+    "contactLink": "https://www.twitter.com/toheebdotcom",
+    "subscribeLink": "https://toheeb.substack.com/",
+    "currentProjectName": "Branding",
+    "currentProjectLink": "https://branding.toheeb.com",
+    "currentProjectTarget": "Enterpreneurs",
+    "maxTitleLength": 15
 }

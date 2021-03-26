@@ -6,12 +6,17 @@ eleventyNavigation:
     order: -1
 ---
 
+{% set contactPage = collections.all | eleventyNavigationBreadcrumb('contact', true) | last %}
+{% set blogPage = collections.all | eleventyNavigationBreadcrumb('blog', true) | last %}
+{% set subscribePage = collections.all | eleventyNavigationBreadcrumb('subscribe', true) | last %}
+{% set productsPage = collections.all | eleventyNavigationBreadcrumb('products', true) | last %}
+
 <main class="main-content">
 
     <header class="page__title">
         <h1 class="title">
             <author class="page__title-subject">
-                <a class="title__subject cta-secondary" href="mailto:ogunbiyi@toheeb.com">toheeB</a>
+                <a class="title__subject cta-secondary" href="{{contactPage.url}}">{{site.name}}</a>
             </author>
             <span class="title__prep page__title-prep">on</span>
             <cite>
@@ -23,15 +28,15 @@ eleventyNavigation:
 
     <p class="description page__description" role="main">
         <span class="description__part">
-            <a href="/tools/" class="cta-secondary">Making</a> products. 
+            <a href="{{productsPage.url}}" class="cta-secondary">Making</a> products. 
         </span>
         
         <span class="description__part">
-            <a href="/blog/" class="cta-secondary">Writing</a> about the process. 
+            <a href="{{blogPage.url}}" class="cta-secondary">Writing</a> about the process. 
         </span>
 
         <span class="description__part">
-            <a href="" class="cta-secondary">Sharing</a> most helpful resources I find on Product Development.
+            <a href="{{subscribePage.url}}" class="cta-secondary">Sharing</a> most helpful resources I find on Product Development.
         </span>
     </p>
 

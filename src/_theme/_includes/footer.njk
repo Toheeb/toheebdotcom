@@ -3,8 +3,8 @@
         {% if page.url == '/' %}   
         
             <p class="info__project">Currently building <a class="cta-secondary"
-                href="https://branding.toheeb.com">branding</a>
-            for entrepreneurs</p>
+                href="{{site.currentProjectLink | url}}">{{site.currentProjectName}}</a>
+            for {{site.currentProjectTarget}}</p>
                     
             {% set signatureClass ="signature" %}
             {% include "signature.njk" %}

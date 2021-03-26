@@ -10,8 +10,8 @@
                     <a href="#" aria-current="page" tabindex="-1" class="breadcrumb-list__item_last">
                         {% set pageTitle = title %}
                         
-                        {% if pageTitle.length > 5 %}
-                            {{ ['<span class="ellipsis">', pageTitle.slice(0, 5), '</span>', '<span class="visually-hidden">', pageTitle.slice(5), '</span>'].join('') | safe }}
+                        {% if pageTitle.length > site.maxTitleLength %}
+                            {{ ['<span class="ellipsis">', pageTitle.slice(0, site.maxTitleLength), '</span>', '<span class="visually-hidden">', pageTitle.slice(site.maxTitleLength), '</span>'].join('') | safe }}
                         {% else %} 
                             {{ pageTitle }}
                         {% endif %}

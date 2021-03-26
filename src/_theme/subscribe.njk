@@ -1,7 +1,8 @@
 ---
 permalink: false
-eleventyNavigation: 
-    key: subscribe
-    parent: home
-    url: https://substack.com/toheeb
+eleventyComputed:
+    eleventyNavigation: 
+        key: subscribe
+        parent: home
+        url: "{{ site.subscribeLink  | url}}"
 ---
